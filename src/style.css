@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background: rgba(144, 135, 165, 0.15);
+    min-height: 100vh;
+    word-break: break-all;
+}
+
+.wrapper {
+    font-size: 24px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+
+}
+.add-todo {
+    position: relative;
+}
+.add-todo form{
+    display: flex;
+    border-bottom: 1px solid #cdcdcd;
+}
+.add-todo input {
+    width: calc(100% - 50px);
+    padding: 8px 5px 8px 33px;
+    font-size: 24px;
+    outline: none;
+}
+.add-todo button.button-left {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 15px;
+    left: 9px;
+    background: transparent;
+    border: transparent;
+    border-bottom: 4px solid #555;
+    border-right: 4px solid #555;
+    transform: rotate(45deg);
+    cursor: pointer;
+    outline: none;
+}
+.add-todo button.button-right {
+    width: 70px;
+    font-size: 24px;
+    background: #ffffff;
+    padding: 5px;
+    border: 1px solid #cdcdcd;
+    cursor: pointer;
+}
+
+.todo-item {
+    padding: 23px;
+}
+
+.todo-item input[type='checkbox'] {
+    margin-right: 5px;
+}
+.todo-item p{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.todo-item p label{
+    width:calc(100% - 50px)
+}
+.completed {
+    font-style: italic;
+    color: #cdcdcd;
+    text-decoration: line-through;
+}
+.todo-item p > input {
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 5px;
+}
+
+.edit-todo {
+    display: none;
+}
+.todo-item p > input:focus {
+
+}
+.todo-item button {
+    color: rgba(205, 37, 65, 0.45);
+    font-size: 19px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid rgba(205, 37, 65, 0.45);
+    background: transparent;
+    float:right;
+    cursor: pointer;
+}
+.todo-item button:hover {
+    color: rgba(205, 37, 65, 0.75);
+}
+
+.wrapper footer{
+    font-size: 14px;
+    padding:9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color:red;*/
+}
+footer ul {
+    display: flex;
+    list-style: none;
+
+}
+footer button{
+    font-size: 14px;
+    background: none;
+    border:1px solid transparent;
+    margin: 0 3px;
+    cursor: pointer;
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+footer button:hover{
+    border-color:rgba(255, 140, 17, 0.56);;
+}
+footer .clear-competed {
+    min-width: 118px;
+}
+footer .clear-competed button{
+    border:none;
+    border-bottom: 1px solid transparent;
+}
+footer .clear-competed button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
