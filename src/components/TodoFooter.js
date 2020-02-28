@@ -6,7 +6,7 @@ function TodoFooter(props) {
         <footer>
             <span className="all-activ-items">
                 {props.activeCount}
-                {props.activeCount === 1 ? "item" : "itemes" } left
+                {props.activeCount === 1 ? " item" : " itemes" } left
             </span>
 
             <ul>
