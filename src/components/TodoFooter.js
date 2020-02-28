@@ -23,7 +23,6 @@ function TodoFooter(props) {
             </div>
         </footer>
     )
-
 }
 
 export default TodoFooter;

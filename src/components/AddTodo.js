@@ -38,8 +38,6 @@ class AddTodo extends Component {
             </div>
         )
     }
-
-
 }
 
 export default AddTodo;

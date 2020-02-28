@@ -7,7 +7,6 @@ import TodoFooter from './components/TodoFooter';
 
 import style from './style.css';
 
-
 class App extends Component {
 
     constructor() {
@@ -111,7 +110,6 @@ class App extends Component {
 
     clearCompleted = () => {
 
-
         this.setState(() => {
              const allActive = this.state.todos.filter(todo => {
                 if(!todo.completed) {
@@ -121,7 +119,6 @@ class App extends Component {
 
             return {todos: allActive}
         });
-
     };
 
     toggleAll = () => {
@@ -140,7 +137,6 @@ class App extends Component {
         })
     };
 
-
     componentDidMount() {
         const todos =  JSON.parse(localStorage.getItem("todos")) || [];
 
@@ -154,15 +150,15 @@ class App extends Component {
 
     render() {
 
-
         const todoList = this.filterTodos(this.state.filter).map(item => {
 
-            return  <TodoItem
-                        onChange={this.handleChange}
-                        onEdit={this.setEditedTodo}
-                        onDelete={this.handleDelete}
-                        key={item.id} item={item}
-                    />
+            return  (
+                <TodoItem
+                    onChange={this.handleChange}
+                    onEdit={this.setEditedTodo}
+                    onDelete={this.handleDelete}
+                    key={item.id} item={item}
+                />)
         });
 
         return (
@@ -186,36 +182,5 @@ class App extends Component {
         )
     }
 }
-
-
-// const useStateWithLocalStorage = localStorageKey => {
-//
-//     const [value, setValue] = useState(
-//         localStorage.getItem(localStorageKey || '')
-//     );
-//
-//     useEffect(() => {
-//         localStorage.setItem(localStorageKey, value);
-//     }, [value]);
-//
-//     return [value, setValue]
-// };
-//
-//
-// function App() {
-//     const [value, setValue] = useStateWithLocalStorage('myValueInLocalStorage');
-//
-//     const onChange = event => setValue(event.target.value);
-//
-//
-//     return (
-//         <div>
-//             <h1>Hello react with local storage</h1>
-//             <input type="text" value={value} onChange={onChange}/>
-//             <p>{value}</p>
-//         </div>
-//     )
-// }
-
 
 export default App;

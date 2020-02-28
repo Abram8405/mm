@@ -56,10 +56,7 @@ class TodoItem extends Component{
 
             </div>
         )
-
     }
-
-
 }
 
 export default TodoItem;
