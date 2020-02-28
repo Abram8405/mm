@@ -142,5 +142,7 @@ footer .clear-competed button{
 footer .clear-competed button:hover {
     text-decoration: underline;
     cursor: pointer;
-
+}
+footer .all-activ-items {
+    min-width: 80px;
 }
