@@ -142,6 +142,7 @@ class App extends Component {
 
         this.setState({todos});
 
+
         window.addEventListener('beforeunload', (event) => {
             event.preventDefault();
             localStorage.setItem("todos", JSON.stringify(this.state.todos));
@@ -149,7 +150,6 @@ class App extends Component {
     }
 
     render() {
-
         const todoList = this.filterTodos(this.state.filter).map(item => {
 
             return  (
@@ -166,6 +166,7 @@ class App extends Component {
                 <AddTodo
                     toggleAll={this.toggleAll}
                     addTodo={this.addTodo}
+                    {...this.state}
                 />
                 <div className="todo-list">
                     { todoList }
