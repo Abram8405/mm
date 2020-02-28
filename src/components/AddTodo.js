@@ -23,8 +23,8 @@ class AddTodo extends Component {
 
         return (
             <div className="add-todo">
-                {this.props.todos.length !== 0 &&
-                    <button onClick={this.props.toggleAll} className="button-left">{''}</button>
+                {!!this.props.todos.length &&
+                 <button onClick={this.props.toggleAll} className="button-left">{''}</button>
                 }
 
                 <form onSubmit={(e) => this.addTodo(e)}>

@@ -113,14 +113,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*background-color:red;*/
 }
 footer ul {
     display: flex;
     list-style: none;
 
 }
-footer button{
+footer button {
     font-size: 14px;
     background: none;
     border:1px solid transparent;

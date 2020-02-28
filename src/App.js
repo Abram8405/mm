@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import uuid from 'react-uuid';
 
+import Header from './components/Header';
 import  AddTodo from './components/AddTodo';
 import TodoItem from './components/TodoItem';
 import TodoFooter from './components/TodoFooter';
@@ -163,6 +164,7 @@ class App extends Component {
 
         return (
             <div className="wrapper">
+                <Header />
                 <AddTodo
                     toggleAll={this.toggleAll}
                     addTodo={this.addTodo}
